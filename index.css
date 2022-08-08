@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +12,115 @@ main.template {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgb(15, 16, 20);
+  background: linear-gradient(to right, rgb(57, 51, 176) 20%, rgb(43, 88, 196), rgb(1, 195, 254));
   display: grid;
   place-items: center;
 }
 
 .container-main {
   position: relative;
-  width: 80%;
-  border: 2px solid cyan;
-  padding: 0.2em;
+  width: 850px;
+  background: #fff;
+  border-radius: 0.7em;
+  padding: 3em 0;
+}
+.container-main .judul {
+  text-align: center;
+  font-size: 1.6em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-container,
+.button-container,
+.description-container {
+  width: 100%;
+  /* border: 2px solid red; */
+  position: relative;
+  display: grid;
+  position: relative;
+  place-items: center;
+}
+
+.input-container {
+  margin-top: 1em;
+}
+.input-container .input-group {
+  width: 70px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  border: 2px solid #000;
+}
+
+.input-group .input-number {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.5em;
+  color: rgb(57, 51, 176);
+  text-align: center;
+}
+
+.input-number:active,
+.input-number:focus {
+  outline: none;
+  border: none;
+}
+
+.button-container {
+  margin-top: 1.3em;
+}
+.button-container .btn-guess {
+  padding: 0.6em 2.5em;
+  text-transform: uppercase;
+  background-color: rgb(57, 51, 176);
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.1s;
+  letter-spacing: 0.5px;
+}
+
+.btn-guess:active {
+  transform: scale(0.9);
+}
+
+.description-container {
+  margin-top: 1.5em;
+  /* border: 2px solid red; */
+}
+
+.description-container span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 1000px) {
+  .container-main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 765px) {
+  .container-main .judul {
+    font-size: 1.2em;
+  }
+  .container-main {
+    padding: 2em 1em;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .container-main .judul {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-height: 417px) {
+  main.template {
+    height: 500px;
+  }
 }
