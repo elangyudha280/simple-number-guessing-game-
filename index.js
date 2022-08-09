@@ -25,7 +25,7 @@ let congratuliationText = document.querySelector('.congratulation-text');
 let congratuliationGuess = document.querySelector('.text-number-guess');
 let numCount = document.querySelector('.num-count');
 let guessCount = 1;
-let random = Math.round(Math.random() * 30);
+let random = Math.round(Math.random() * 20);
 
 // 2.add event for button
 buttonGuess.addEventListener('click',function(){
@@ -41,6 +41,7 @@ buttonGuess.addEventListener('click',function(){
                 congratuliationGuess.classList.add('congratuliation-active');
                }, 300);
             }, 200);
+            inputGuess.value = '';
         }else if(inputGuess.value == ''){
             console.log('masukan angka')
         }
