@@ -100,6 +100,12 @@ main.template {
   font-family: 'Poppins', sans-serif;
   font-size: 0.9em;
 }
+.congratulation-text,
+.text-number-guess {
+  opacity: 0;
+  display: none;
+  transition: 0.5s;
+}
 
 @media screen and (max-width: 1000px) {
   .container-main {
@@ -125,4 +131,8 @@ main.template {
   main.template {
     height: 500px;
   }
+}
+
+main.template .congratuliation-active {
+  opacity: 1;
 }

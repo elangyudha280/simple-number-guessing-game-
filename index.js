@@ -20,19 +20,32 @@
 
 const buttonGuess = document.querySelector('.btn-guess');
 let inputGuess = document.querySelector('.input-number');
+
+let congratuliationText = document.querySelector('.congratulation-text');
+let congratuliationGuess = document.querySelector('.text-number-guess');
+let numCount = document.querySelector('.num-count');
 let guessCount = 1;
+let random = Math.round(Math.random() * 30);
 
 // 2.add event for button
 buttonGuess.addEventListener('click',function(){
     // 2.1 membuat angka random
-    let random = Math.round(Math.random() * 30);
+    console.log(random)
         if(inputGuess.value == random){
-            console.log('ok')
+            
+            congratuliationText.style.display = 'initial';
+            congratuliationGuess.style.display = 'initial';
+            setTimeout(() => {
+                congratuliationText.classList.add('congratuliation-active');
+               setTimeout(() => {
+                congratuliationGuess.classList.add('congratuliation-active');
+               }, 300);
+            }, 200);
         }else if(inputGuess.value == ''){
             console.log('masukan angka')
         }
         else{   
-         console.log(guessCount++);
+        numCount.textContent = guessCount++;
         }
 })
 
