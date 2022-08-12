@@ -26,11 +26,11 @@ let congratuliationGuess = document.querySelector('.text-number-guess');
 let numCount = document.querySelector('.num-count');
 let guessCount = 1;
 let random = Math.round(Math.random() * 20);
+console.log(random)
 
 // 2.add event for button
 buttonGuess.addEventListener('click',function(){
     // 2.1 membuat angka random
-    console.log(random)
         if(inputGuess.value == random){
             
             congratuliationText.style.display = 'initial';
@@ -41,6 +41,9 @@ buttonGuess.addEventListener('click',function(){
                 congratuliationGuess.classList.add('congratuliation-active');
                }, 300);
             }, 200);
+            setTimeout(() => {
+                    window.location = location;
+            }, 400);
             inputGuess.value = '';
         }else if(inputGuess.value == ''){
             console.log('masukan angka')
