@@ -4,15 +4,6 @@
 
 
 
-// let random = Math.round(Math.random() * 10) ;
-
-// if(random == 5){
-//     console.log('anda benar saya menebak angka 5')
-// }
-
-// console.log(random)
-
-
 // fitur guess angka 
 
 // 1.SELEKSI ELEMENT 
@@ -29,7 +20,7 @@ let random = Math.round(Math.random() * 20);
 
 // 2.add event for button
 buttonGuess.addEventListener('click',function(){
-    // 2.1 membuat angka random
+
         if(inputGuess.value == random){
             
             congratuliationText.style.display = 'initial';
