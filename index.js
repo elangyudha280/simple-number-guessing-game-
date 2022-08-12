@@ -26,7 +26,6 @@ let congratuliationGuess = document.querySelector('.text-number-guess');
 let numCount = document.querySelector('.num-count');
 let guessCount = 1;
 let random = Math.round(Math.random() * 20);
-console.log(random)
 
 // 2.add event for button
 buttonGuess.addEventListener('click',function(){
